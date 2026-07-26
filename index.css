@@ -535,11 +535,38 @@ html:not(.dark) .moon-icon { display: block; }
 }
 
 .hero-experience-text {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
   margin-top: 16px;
-  width: 100%;
+  text-align: center;
+  max-width: 100%;
+}
+
+.scroll-down-arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow:hover {
+  opacity: 1;
+  color: var(--text-main);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
 }
 
 .text-green { color: #34C759; }
