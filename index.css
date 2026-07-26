@@ -1030,6 +1030,21 @@ html:not(.dark) .moon-icon { display: block; }
     padding: 100px 0 80px;
   }
 
+  .hero-header-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  .hero-avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
   .hero-tech-stack {
     position: relative;
     right: auto;
@@ -1038,14 +1053,14 @@ html:not(.dark) .moon-icon { display: block; }
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 12px;
-    margin-bottom: 32px;
-    margin-top: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
     opacity: 1;
     width: 100%;
     overflow-x: auto;
-    padding: 24px 0 12px 0; /* padding on top for the labels to pop up without cutting off */
+    padding: 24px 0 12px 0;
   }
   
   /* Hide scrollbar for neatness */
