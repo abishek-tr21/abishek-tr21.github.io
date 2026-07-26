@@ -450,10 +450,9 @@ html:not(.dark) .moon-icon { display: block; }
 }
 
 .hero-stats-bento {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   margin-top: 48px;
-  max-width: 520px;
+  width: fit-content;
   border-radius: var(--radius-lg);
   border: 1px solid var(--glass-border);
 }
@@ -463,14 +462,11 @@ html:not(.dark) .moon-icon { display: block; }
   display: flex;
   flex-direction: column;
   gap: 6px;
+  border-right: 1px solid var(--border);
 }
 
-.bento-quad.border-left {
-  border-left: 1px solid var(--border);
-}
-
-.bento-quad.border-top {
-  border-top: 1px solid var(--border);
+.bento-quad:last-child {
+  border-right: none;
 }
 
 .bento-val {
@@ -972,6 +968,26 @@ html:not(.dark) .moon-icon { display: block; }
   .hero {
     min-height: calc(100vh - 48px);
     padding: 100px 0 80px;
+  }
+
+  .hero-stats-bento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .bento-quad {
+    border-right: none;
+    padding: 20px;
+  }
+
+  .bento-quad:nth-child(even) {
+    border-left: 1px solid var(--border);
+  }
+
+  .bento-quad:nth-child(3),
+  .bento-quad:nth-child(4) {
+    border-top: 1px solid var(--border);
   }
 
   .hero-avatar {
