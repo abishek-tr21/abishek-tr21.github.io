@@ -1003,7 +1003,21 @@ html:not(.dark) .moon-icon { display: block; }
   }
 
   .hero-tech-stack {
-    display: none;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    opacity: 1;
+    display: flex;
+  }
+  
+  .tech-icon {
+    width: 32px;
+    height: 32px;
   }
 
   .hero-stats-bento {
