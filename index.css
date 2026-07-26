@@ -433,9 +433,9 @@ html:not(.dark) .moon-icon { display: block; }
   right: 24px;
   top: 50%;
   transform: translateY(-50%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   z-index: 2;
 }
 
