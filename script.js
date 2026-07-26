@@ -58,10 +58,6 @@
     topNavLinks.forEach((link) => {
       link.classList.toggle("active", link.dataset.nav === activeNav);
     });
-
-    bottomNavItems.forEach((item) => {
-      item.classList.toggle("active", item.dataset.nav === activeNav);
-    });
   }
 
   window.addEventListener("scroll", updateActiveNav, { passive: true });
@@ -122,5 +118,36 @@
       metaThemeColor.setAttribute('content', isDark ? '#121212' : '#FAF6F0');
     }
   });
+
+  // ─── 6. Mobile Menu Toggle ──────────────────────────────────────────────────
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = menuToggle?.querySelector('.menu-icon');
+  const closeIcon = menuToggle?.querySelector('.close-icon');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      const isActive = mobileMenu.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+      
+      if (menuIcon && closeIcon) {
+        menuIcon.style.display = isActive ? 'none' : 'block';
+        closeIcon.style.display = isActive ? 'block' : 'none';
+      }
+    });
+
+    // Close menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        if (menuIcon && closeIcon) {
+          menuIcon.style.display = 'block';
+          closeIcon.style.display = 'none';
+        }
+      });
+    });
+  }
 
 })();

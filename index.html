@@ -51,13 +51,31 @@
         <a href="#projects" data-nav="projects">Projects</a>
         <a href="#education" data-nav="education">Education</a>
         <a href="#contact" class="nav-cta">Say hello</a>
+      </nav>
+      <div class="nav-controls">
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
-      </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-content">
+      <a href="#about" class="mobile-nav-item">About</a>
+      <a href="#skills" class="mobile-nav-item">Skills</a>
+      <a href="#projects" class="mobile-nav-item">Projects</a>
+      <a href="#github" class="mobile-nav-item">GitHub</a>
+      <a href="#education" class="mobile-nav-item">Education</a>
+      <a href="#contact" class="btn-primary mobile-cta">Say hello</a>
+    </div>
+  </div>
 
   <main id="main-content">
 
@@ -84,29 +102,25 @@
             Resume
           </a>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-value">India</span>
-            <span class="hero-stat-label">Based in</span>
+        <div class="hero-stats-bento glass-card">
+          <div class="bento-quad">
+            <span class="bento-val" style="color: var(--text-primary)">India</span>
+            <span class="bento-lbl">Based in</span>
           </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">
+          <div class="bento-quad border-left">
+            <span class="bento-val" style="color: var(--text-primary)">
               <span class="status-dot"></span>
-              Open to work
+              Open to chat
             </span>
-            <span class="hero-stat-label">Status</span>
+            <span class="bento-lbl">Status</span>
           </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">B.Tech ECE</span>
-            <span class="hero-stat-label">SASTRA '26</span>
+          <div class="bento-quad border-top">
+            <span class="bento-val text-green">Hardware</span>
+            <span class="bento-lbl">By day</span>
           </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">Hardware</span>
-            <span class="hero-stat-label">by day</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">Software</span>
-            <span class="hero-stat-label">by night</span>
+          <div class="bento-quad border-top border-left">
+            <span class="bento-val text-blue">Software</span>
+            <span class="bento-lbl">By night</span>
           </div>
         </div>
       </div>
@@ -317,6 +331,53 @@
       </div>
     </section>
 
+    <!-- ═══ GitHub Section ═══ -->
+    <section class="github-section" id="github">
+      <div class="container">
+        <div class="reveal github-header">
+          <span class="eyebrow">OPEN SOURCE</span>
+          <h2 class="section-title" style="margin-top:12px;">On GitHub.</h2>
+          <p class="section-subtitle">Public repos, sorted by latest push.</p>
+          <a href="https://github.com/abishek-tr21" target="_blank" class="github-link">View profile →</a>
+        </div>
+
+        <div class="repo-grid reveal">
+          <!-- CHITTI -->
+          <a href="https://github.com/abishek-tr21/CHITTI" target="_blank" class="repo-card glass-card">
+            <h3 class="repo-name">CHITTI</h3>
+            <p class="repo-desc">Conversational Humanoid Interface with Thinking & Talking Intelligence</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot python"></span>Python</span>
+            </div>
+          </a>
+          <!-- Flight Computer -->
+          <a href="https://github.com/abishek-tr21/flight-computer" target="_blank" class="repo-card glass-card">
+            <h3 class="repo-name">Flight-Computer</h3>
+            <p class="repo-desc">Real-time thrust vector control system for model rockets</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot c"></span>C</span>
+            </div>
+          </a>
+          <!-- Skin DL -->
+          <a href="https://github.com/abishek-tr21/Autoimmune-Skin-Disease-DL" target="_blank" class="repo-card glass-card">
+            <h3 class="repo-name">Autoimmune-Skin-Disease-DL</h3>
+            <p class="repo-desc">Deep learning model for detecting skin diseases</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot python"></span>Python</span>
+            </div>
+          </a>
+          <!-- 12V -->
+          <a href="https://github.com/abishek-tr21/12V-DC-Solar-Home-Automation" target="_blank" class="repo-card glass-card">
+            <h3 class="repo-name">12V-DC-Solar-Home-Automation</h3>
+            <p class="repo-desc">Automated home power management system running on solar</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot cpp"></span>C++</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ Education Section ═══ -->
     <section class="education-section" id="education">
       <div class="container">
@@ -371,26 +432,6 @@
     </section>
 
   </main>
-
-  <!-- ═══ Mobile Bottom Navigation Bar ═══ -->
-  <nav class="bottom-nav" id="bottomNav" aria-label="Mobile navigation">
-    <a href="#home" class="bottom-nav-item active" data-nav="home">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      <span>Home</span>
-    </a>
-    <a href="#skills" class="bottom-nav-item" data-nav="skills">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-      <span>Skills</span>
-    </a>
-    <a href="#projects" class="bottom-nav-item" data-nav="projects">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-      <span>Projects</span>
-    </a>
-    <a href="#contact" class="bottom-nav-item" data-nav="contact">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-      <span>Contact</span>
-    </a>
-  </nav>
 
   <script src="script.js"></script>
 </body>
