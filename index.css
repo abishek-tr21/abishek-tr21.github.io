@@ -302,6 +302,7 @@ html:not(.dark) .moon-icon { display: block; }
   border: 4px solid var(--bg-card);
   box-shadow: var(--glass-shadow);
   display: block;
+  flex-shrink: 0;
 }
 
 .hero-headline {
@@ -869,6 +870,13 @@ html:not(.dark) .moon-icon { display: block; }
   .hero {
     min-height: calc(100vh - 48px);
     padding: 100px 0 80px;
+  }
+
+  .hero-avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
   }
 
   .hero-headline {
