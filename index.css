@@ -439,6 +439,30 @@ html:not(.dark) .moon-icon { display: block; }
   z-index: 2;
 }
 
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.tech-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand-color);
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity var(--transition-med), transform var(--transition-med);
+  white-space: nowrap;
+}
+
+.tech-item:hover .tech-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .tech-icon {
   width: 36px;
   height: 36px;
@@ -448,8 +472,8 @@ html:not(.dark) .moon-icon { display: block; }
   transition: transform var(--transition-med), opacity var(--transition-med);
 }
 
-.tech-icon:hover {
-  transform: scale(1.15) translateY(-5px);
+.tech-item:hover .tech-icon {
+  transform: scale(1.15) translateY(-2px);
   opacity: 1;
 }
 
