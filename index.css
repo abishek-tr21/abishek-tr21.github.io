@@ -454,7 +454,7 @@ html:not(.dark) .moon-icon { display: block; }
   grid-template-columns: repeat(4, 1fr);
   margin-top: 48px;
   width: 100%;
-  max-width: 640px;
+  max-width: 760px;
   border-radius: var(--radius-lg);
   background: var(--bg-card); /* Keep or make it slightly darker if needed */
   border: 1px solid rgba(255, 255, 255, 0.05); /* very subtle border */
