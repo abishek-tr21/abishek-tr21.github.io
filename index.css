@@ -440,14 +440,16 @@ html:not(.dark) .moon-icon { display: block; }
 }
 
 .tech-item {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
   cursor: pointer;
-  justify-content: flex-end;
 }
 
 .tech-label {
+  position: absolute;
+  right: 100%;
+  margin-right: 12px;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--brand-color);
@@ -458,7 +460,8 @@ html:not(.dark) .moon-icon { display: block; }
   white-space: nowrap;
 }
 
-.tech-item:hover .tech-label {
+.tech-item:hover .tech-label,
+.tech-item:active .tech-label {
   opacity: 1;
   transform: translateX(0);
 }
@@ -472,7 +475,8 @@ html:not(.dark) .moon-icon { display: block; }
   transition: transform var(--transition-med), opacity var(--transition-med);
 }
 
-.tech-item:hover .tech-icon {
+.tech-item:hover .tech-icon,
+.tech-item:active .tech-icon {
   transform: scale(1.15) translateY(-2px);
   opacity: 1;
 }
@@ -1033,17 +1037,44 @@ html:not(.dark) .moon-icon { display: block; }
     transform: none;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
     gap: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     margin-top: 16px;
     opacity: 1;
+    width: 100%;
+    overflow-x: auto;
+    padding: 24px 0 12px 0; /* padding on top for the labels to pop up without cutting off */
+  }
+  
+  /* Hide scrollbar for neatness */
+  .hero-tech-stack::-webkit-scrollbar {
+    display: none;
+  }
+  .hero-tech-stack {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   
   .tech-icon {
     width: 28px;
     height: 28px;
+  }
+  
+  .tech-label {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+    transform: translateX(-50%) translateY(10px);
+  }
+  
+  .tech-item:hover .tech-label,
+  .tech-item:active .tech-label {
+    transform: translateX(-50%) translateY(0);
   }
 
   .hero-stats-bento {
